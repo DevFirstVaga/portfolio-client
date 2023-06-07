@@ -6,7 +6,7 @@ export const theme = {
     secondary: "#BF1A2F",
     tertiary: "#018E42",
   },
-  font: {
+  fonts: {
     primary: "Roboto",
     display: "Poppins",
     size: {
