@@ -8,6 +8,7 @@ export type BtnProps = {
   leftIcon?: JSX.Element;
   rightIcon?: JSX.Element;
   href?: string;
+  onclick?: () => void;
 };
 
 function Button({
@@ -18,6 +19,7 @@ function Button({
   leftIcon,
   rightIcon,
   href,
+  onclick,
 }: BtnProps) {
   if (href) {
     return (
@@ -36,7 +38,7 @@ function Button({
     );
   }
   return (
-    <S.Wrapper color={color} variant={variant} size={size}>
+    <S.Wrapper color={color} variant={variant} size={size} onClick={onclick}>
       {leftIcon && <S.iconWrapper>{leftIcon}</S.iconWrapper>}
       {children}
       {rightIcon && <S.iconWrapper>{rightIcon}</S.iconWrapper>}

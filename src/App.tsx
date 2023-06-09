@@ -15,7 +15,6 @@ function App() {
         size="medium"
         color={theme.colors.black}
         leftIcon={<BsGithub />}
-        // rightIcon={<BsGit />}
       >
         GitHub
       </Button>
