@@ -1,19 +1,22 @@
 import { BsGithub } from "react-icons/bs";
-
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
-import Button from "./components/Button";
 import GlobalStyle from "./theme/global";
+import Button from "./components/Button";
+import Header from "./components/Header";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <h1>Hello, World!!</h1>
+      <Header
+        nickname="DrewDomi"
+        section={["Sobre", "Skills", "Projetos", "Contato"]}
+      />
       <Button
         variant="solid"
         size="medium"
-        color={theme.colors.black}
+        color="#000"
         leftIcon={<BsGithub />}
       >
         GitHub
