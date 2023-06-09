@@ -1,4 +1,4 @@
-import { BsGithub, BsGit } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
