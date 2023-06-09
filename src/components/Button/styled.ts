@@ -51,12 +51,19 @@ export const Wrapper = styled.button<StyledProps>`
     color: #fff;
     border: solid 2px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
     transition: 0.2s ease;
     &:active {
       transform: scale(0.9);
     }
-
     ${!!variant && wrapperModifiers[variant](theme, color)}
     ${!!size && wrapperModifiers[size]()}
   `}
+`;
+
+export const iconWrapper = styled.span`
+  svg {
+    display: block;
+  }
 `;

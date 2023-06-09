@@ -1,5 +1,6 @@
-import { ThemeProvider } from "styled-components";
+import { BsGithub, BsGit } from "react-icons/bs";
 
+import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
 import Button from "./components/Button";
 import GlobalStyle from "./theme/global";
@@ -9,7 +10,15 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <h1>Hello, World!!</h1>
-      <Button color={theme.colors.secondary}>Click Me</Button>
+      <Button
+        variant="solid"
+        size="medium"
+        color={theme.colors.black}
+        leftIcon={<BsGithub />}
+        // rightIcon={<BsGit />}
+      >
+        GitHub
+      </Button>
     </ThemeProvider>
   );
 }
