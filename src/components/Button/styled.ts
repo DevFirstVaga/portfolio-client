@@ -62,6 +62,11 @@ export const Wrapper = styled.button<StyledProps>`
   `}
 `;
 
+export const WrapperLink = styled(Wrapper)`
+  display: inline-flex;
+  text-decoration: none;
+`;
+
 export const iconWrapper = styled.span`
   svg {
     display: block;
