@@ -1,7 +1,18 @@
-import styled, { DefaultTheme, css } from "styled-components";
+import styled, { DefaultTheme, css, keyframes } from "styled-components";
 import { HeaderProps } from ".";
 
 type StyledProps = { theme: DefaultTheme } & HeaderProps;
+
+const menuAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const Wrapper = styled.header<StyledProps>`
   ${({ theme }) => css`
@@ -19,6 +30,9 @@ export const Wrapper = styled.header<StyledProps>`
       border-radius: 6px;
       width: 160px;
       padding: 10px 0;
+      opacity: 0;
+      transform: translateY(-10px);
+      animation: ${menuAnimation} 0.3s ease-in-out forwards;
     }
     ul {
       a {

@@ -13,6 +13,10 @@ function Header({ section, nickname }: HeaderProps) {
     setToggle((prevState) => !prevState);
   }
 
+  function closeMenu(){
+    setTimeout(toggleMenu, 100);
+  }
+
   useEffect(() => {
     function handleResize() {
       const isMobile = window.innerWidth <= 700;
@@ -43,7 +47,7 @@ function Header({ section, nickname }: HeaderProps) {
             {section?.map((link, index) => {
               return (
                 <li key={index}>
-                  <a href={`#${link}`}>{link}</a>
+                  <a onClick={closeMenu} href={`#${link}`}>{link}</a>
                 </li>
               );
             })}
