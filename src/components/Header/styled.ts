@@ -32,13 +32,43 @@ export const Wrapper = styled.header<StyledProps>`
       }
     }
     span {
-      font-size: 42px;
+      font-size: 40px;
       cursor: pointer;
       svg {
         display: block;
       }
     }
-    @media (min-width: 800px) {
+    @media (min-width: 700px) {
+      nav {
+        position: initial;
+        width: initial;
+        background-color: initial;
+        font-size: 18px;
+        padding: 5px 0;
+      }
+      ul {
+        display: flex;
+        a {
+          &:hover {
+            text-decoration: none;
+            background-color: transparent;
+          }
+          &::after {
+            background-color: ${theme.colors.white};
+            content: "";
+            width: 0;
+            height: 2px;
+            display: block;
+            transition: width ease 0.3s;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+      span {
+        display: none;
+      }
     }
   `}
 `;
