@@ -9,6 +9,7 @@ export const Wrapper = styled.header<StyledProps>`
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: relative;
     nav {
       font-size: 20px;
       background-color: #505050;
@@ -31,13 +32,13 @@ export const Wrapper = styled.header<StyledProps>`
       }
     }
     span {
-      border: solid 2px ${theme.colors.white};
-      border-radius: 8px;
-      font-size: 40px;
+      font-size: 42px;
       cursor: pointer;
       svg {
         display: block;
       }
+    }
+    @media (min-width: 800px) {
     }
   `}
 `;
