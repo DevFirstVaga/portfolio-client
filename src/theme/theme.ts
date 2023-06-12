@@ -1,10 +1,10 @@
 export const theme = {
   colors: {
-    black: "#171717",
-    white: "#F4EBD9",
-    gray: "#808080",
-    primary: "#4281A4",
-    secondary: "#985F99",
+    black: "#121113",
+    white: "#E8F7EE",
+    gray: "#717568",
+    primary: "#1C77C3",
+    secondary: "#CD4631",
     tertiary: "#031926",
   },
   fonts: {

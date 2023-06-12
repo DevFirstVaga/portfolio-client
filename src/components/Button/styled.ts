@@ -1,7 +1,7 @@
 import styled, { DefaultTheme, css } from "styled-components";
 import { BtnProps } from ".";
 
-type StyledProps = { theme: DefaultTheme } & BtnProps;
+type StyledProps = { theme: DefaultTheme; } & BtnProps;
 
 const wrapperModifiers = {
   solid: (theme: DefaultTheme, color?: string) => css`
@@ -53,7 +53,7 @@ export const Wrapper = styled.button<StyledProps>`
     font-weight: 700;
     display: flex;
     align-items: center;
-    transition: 0.2s ease;
+    transition: 0.2s ease-in-out;
     &:active {
       transform: scale(0.9);
     }

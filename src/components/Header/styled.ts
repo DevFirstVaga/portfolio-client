@@ -1,7 +1,7 @@
 import styled, { DefaultTheme, css, keyframes } from "styled-components";
 import { HeaderProps } from ".";
 
-type StyledProps = { theme: DefaultTheme } & HeaderProps;
+type StyledProps = { theme: DefaultTheme; } & HeaderProps;
 
 const menuAnimation = keyframes`
   from {

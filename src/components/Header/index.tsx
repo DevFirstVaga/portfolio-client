@@ -3,28 +3,27 @@ import * as S from "./styled";
 import { useState, useEffect } from "react";
 
 export type HeaderProps = {
-  section?: Array<string>;
+  sections?: Array<string>;
   nickname?: string;
 };
 
-function Header({ section, nickname }: HeaderProps) {
+function Header({ sections, nickname }: HeaderProps) {
   const [toggle, setToggle] = useState(false);
   function toggleMenu() {
-    setToggle((prevState) => !prevState);
+    setToggle(prevState => !prevState);
   }
 
-  function closeMenu(){
+  function closeMenu() {
     setTimeout(toggleMenu, 100);
   }
 
   useEffect(() => {
     function handleResize() {
       const isMobile = window.innerWidth <= 700;
-      if (isMobile) {
+      if (isMobile)
         setToggle(false);
-      } else {
+      else
         setToggle(true);
-      }
     }
 
     window.addEventListener("resize", handleResize);
@@ -44,7 +43,7 @@ function Header({ section, nickname }: HeaderProps) {
       {(toggle || window.innerWidth > 700) && (
         <nav>
           <ul>
-            {section?.map((link, index) => {
+            {sections?.map((link, index) => {
               return (
                 <li key={index}>
                   <a onClick={closeMenu} href={`#${link}`}>{link}</a>

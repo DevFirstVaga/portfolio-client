@@ -11,12 +11,12 @@ function App() {
       <GlobalStyle />
       <Header
         nickname="DrewDomi"
-        section={["Sobre", "Skills", "Projetos", "Contato"]}
+        sections={["Sobre", "Skills", "Projetos", "Contato"]}
       />
       <Button
         variant="solid"
         size="medium"
-        color="#000"
+        color={theme.colors.primary}
         leftIcon={<BsGithub />}
       >
         GitHub
