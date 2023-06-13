@@ -21,13 +21,18 @@ export const Wrapper = styled.header<StyledProps>`
     align-items: center;
     padding: 20px;
     position: relative;
+    h1{
+      font-family: ${theme.fonts.display};
+      font-weight: ${theme.fonts.weight.medium};
+      font-size: 2.4rem;
+    }
     nav {
       font-size: 20px;
       background-color: #505050;
       position: absolute;
       top: 70px;
       right: 20px;
-      border-radius: 6px;
+      border-radius: 14px;
       width: 160px;
       padding: 10px 0;
       opacity: 0;

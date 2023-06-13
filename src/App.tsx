@@ -1,9 +1,8 @@
-import { BsGithub } from "react-icons/bs";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
 import GlobalStyle from "./theme/global";
-import Button from "./components/Button";
 import Header from "./components/Header";
+import NameAndRole from "./components/NameAndRole";
 
 function App() {
   return (
@@ -13,14 +12,7 @@ function App() {
         nickname="DrewDomi"
         sections={["Sobre", "Skills", "Projetos", "Contato"]}
       />
-      <Button
-        variant="solid"
-        size="medium"
-        color="#000000"
-        leftIcon={<BsGithub />}
-      >
-        GitHub
-      </Button>
+      <NameAndRole />
     </ThemeProvider>
   );
 }
