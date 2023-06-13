@@ -16,6 +16,7 @@ function App() {
       <Button
         variant="solid"
         size="medium"
+        color="#000000"
         leftIcon={<BsGithub />}
       >
         GitHub

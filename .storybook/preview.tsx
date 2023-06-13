@@ -12,7 +12,7 @@ const preview: Preview = {
     (Story) => (
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Story />
+        {Story()}
       </ThemeProvider>
     ),
   ],
