@@ -21,6 +21,8 @@ export const Wrapper = styled.header<StyledProps>`
     align-items: center;
     padding: 20px;
     position: relative;
+    max-width: 700px;
+    margin: auto;
     h1{
       font-family: ${theme.fonts.display};
       font-weight: ${theme.fonts.weight.medium};

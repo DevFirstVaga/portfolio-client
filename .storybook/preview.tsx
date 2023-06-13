@@ -12,8 +12,10 @@ const preview: Preview = {
     (Story) => (
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        {Story()}
-      </ThemeProvider>
+        <div onClick={(event) => event.preventDefault()}>
+          {Story()}
+        </div>
+      </ThemeProvider >
     ),
   ],
 

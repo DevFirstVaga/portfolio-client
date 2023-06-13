@@ -16,8 +16,6 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: ${theme.colors.black};
     color: ${theme.colors.white};
-    margin: auto;
-    max-width: 700px;
   }
 `;
 
