@@ -4,6 +4,7 @@ import GlobalStyle from "./theme/global";
 import Header from "./components/Header";
 import NameAndRole from "./components/NameAndRole";
 import Photo, { img } from "./components/Photo";
+import Bio, { TEXT } from "./components/Bio";
 
 
 function App() {
@@ -19,7 +20,12 @@ function App() {
           name="Andrew Domingues"
           role="Front-end Developer & UX/UI Designer."
         />
-        <Photo imgLink={img} />
+        <Photo
+          imgLink={img}
+        />
+        <Bio
+          text={TEXT}
+        />
       </main>
     </ThemeProvider>
   );
