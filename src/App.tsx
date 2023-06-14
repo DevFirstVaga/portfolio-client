@@ -12,7 +12,10 @@ function App() {
         nickname="DrewDomi"
         sections={["Sobre", "Skills", "Projetos", "Contato"]}
       />
-      <NameAndRole />
+      <NameAndRole
+        name="Andrew Domingues"
+        role="Front-end Developer & UX/UI Designer."
+      />
     </ThemeProvider>
   );
 }
