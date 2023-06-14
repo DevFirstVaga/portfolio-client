@@ -59,7 +59,7 @@ export const Wrapper = styled.header<StyledProps>`
         display: block;
       }
     }
-    @media (min-width: 70rem) {
+    @media (min-width: 700px) {
       nav {
         position: initial;
         width: initial;
