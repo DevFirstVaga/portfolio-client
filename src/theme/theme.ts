@@ -8,11 +8,16 @@ export const theme = {
     tertiary: "#031926",
   },
   fonts: {
-    primary: "Roboto",
-    display: "Poppins",
+    primary: "Roboto, sans-serif",
+    display: "Rubik, sans-serif",
     size: {
-      small: "2.8rem",
-      large: "3.2rem",
+      text: "1.6rem",
+      sectionTitle: "2.4rem",
+      title: "2.8rem",
     },
+    weight: {
+      regular: "400",
+      medium: "500",
+    }
   },
 } as const;
