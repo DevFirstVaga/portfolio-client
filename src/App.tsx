@@ -3,6 +3,8 @@ import { theme } from "./theme/theme";
 import GlobalStyle from "./theme/global";
 import Header from "./components/Header";
 import NameAndRole from "./components/NameAndRole";
+import Photo, { img } from "./components/Photo";
+
 
 function App() {
   return (
@@ -12,10 +14,13 @@ function App() {
         nickname="DrewDomi"
         sections={["Sobre", "Skills", "Projetos", "Contato"]}
       />
-      <NameAndRole
-        name="Andrew Domingues"
-        role="Front-end Developer & UX/UI Designer."
-      />
+      <main>
+        <NameAndRole
+          name="Andrew Domingues"
+          role="Front-end Developer & UX/UI Designer."
+        />
+        <Photo imgLink={img} />
+      </main>
     </ThemeProvider>
   );
 }
