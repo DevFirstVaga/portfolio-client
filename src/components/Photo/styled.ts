@@ -8,7 +8,7 @@ export const Wrapper = styled.div<StyledProps>`
   img{
       border: .2rem solid ${theme.colors.white};
       border-radius: 50%;
-      margin: 3rem auto 4rem;
+      margin: 3rem auto 0;
       text-align: center;
       object-fit: cover;
       display: block;

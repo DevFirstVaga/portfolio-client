@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import NameAndRole from "./components/NameAndRole";
 import Photo, { img } from "./components/Photo";
 import Bio, { TEXT } from "./components/Bio";
+import Button from "./components/Button";
+import { BsGithub, BsFilePdfFill } from "react-icons/bs";
 
 
 function App() {
@@ -16,16 +18,35 @@ function App() {
         sections={["Sobre", "Skills", "Projetos", "Contato"]}
       />
       <main>
-        <NameAndRole
-          name="Andrew Domingues"
-          role="Front-end Developer & UX/UI Designer."
-        />
-        <Photo
-          imgLink={img}
-        />
-        <Bio
-          text={TEXT}
-        />
+        <section id="Sobre">
+          <NameAndRole
+            name="Andrew Domingues"
+            role="Front-end Developer & UX/UI Designer."
+          />
+          <Photo
+            imgLink={img}
+          />
+          <Bio
+            text={TEXT}
+          />
+          <div className="cta-buttons">
+            <Button
+              href="https://github.com"
+              leftIcon={<BsGithub />}
+              color="black"
+            >
+              GitHub
+            </Button>
+            <Button
+              href="https://example.org"
+              color="dodgerblue"
+              variant="ghost"
+              leftIcon={<BsFilePdfFill />}
+            >
+              Baixar CV
+            </Button>
+          </div>
+        </section>
       </main>
     </ThemeProvider>
   );

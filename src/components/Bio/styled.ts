@@ -7,7 +7,7 @@ export const Wrapper = styled.div<StyledProps>`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     max-width: 27.5rem;
-    margin: auto;
+    margin: 4rem auto 3rem;
     p {
       font-size: ${theme.fonts.primary};
       font-size: ${theme.fonts.size.text};

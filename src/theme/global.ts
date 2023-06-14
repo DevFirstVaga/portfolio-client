@@ -17,6 +17,16 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${theme.colors.black};
     color: ${theme.colors.white};
   }
+  main{
+    max-width: 500px;
+    margin: auto;
+    text-align: center
+  }
+  .cta-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
 `;
 
 export default GlobalStyle;
