@@ -3,7 +3,7 @@ import { theme } from "./theme/theme";
 import GlobalStyle from "./theme/global";
 import Header from "./components/Header";
 import NameAndRole from "./components/NameAndRole";
-import Photo, { img } from "./components/Photo";
+import Photo, { IMG } from "./components/Photo";
 import Bio, { TEXT } from "./components/Bio";
 import Button from "./components/Button";
 import { BsGithub, BsFilePdfFill } from "react-icons/bs";
@@ -24,7 +24,7 @@ function App() {
             role="Front-end Developer & UX/UI Designer."
           />
           <Photo
-            imgLink={img}
+            imgLink={IMG}
           />
           <Bio
             text={TEXT}
@@ -39,8 +39,7 @@ function App() {
             </Button>
             <Button
               href="https://example.org"
-              color="dodgerblue"
-              variant="ghost"
+              color={theme.colors.secondary}
               leftIcon={<BsFilePdfFill />}
             >
               Baixar CV

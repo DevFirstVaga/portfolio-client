@@ -2,8 +2,6 @@ import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    max-width: 500px;
-    margin: auto;
     text-align: center;
     display: flex;
     flex-direction: column;

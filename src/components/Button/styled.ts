@@ -25,22 +25,22 @@ const wrapperModifiers = {
     text-decoration: underline;
   `,
   small: () => css`
-    font-size: 14px;
-    border-radius: 14px;
-    padding: 8px 16px;
-    gap: 4px;
+    font-size: 1.4rem;
+    border-radius: 1.4rem;
+    padding: .8rem 1.6rem;
+    gap: .4rem;
   `,
   medium: () => css`
-    font-size: 16px;
-    border-radius: 16px;
-    padding: 10px 20px;
-    gap: 6px;
+    font-size: 1.6rem;
+    border-radius: 1.6rem;
+    padding: 1rem 2rem;
+    gap: .6rem;
   `,
   large: () => css`
-    font-size: 18px;
-    border-radius: 20px;
-    padding: 12px 24px;
-    gap: 8px;
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    padding: 1.2rem 2.4rem;
+    gap: .8rem;
   `,
 };
 
@@ -49,8 +49,8 @@ export const Wrapper = styled.button<StyledProps>`
     background-color: ${theme.colors.primary};
     cursor: pointer;
     color: #fff;
-    border: solid 2px;
-    font-weight: 700;
+    border: solid .2rem;
+    font-weight: ${theme.fonts.weight.medium};
     display: flex;
     align-items: center;
     transition: 0.2s ease-in-out;
