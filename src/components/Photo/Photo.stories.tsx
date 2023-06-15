@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Photo, { img } from ".";
+import Photo, { IMG } from ".";
 
 export default {
   title: "Components/Photo",
@@ -10,6 +10,6 @@ type Story = StoryObj<typeof Photo>;
 
 export const Default: Story = {
   args: {
-    imgLink: img
+    imgLink: IMG
   }
 };
