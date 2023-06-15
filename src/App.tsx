@@ -7,6 +7,7 @@ import Photo, { IMG } from "./components/Photo";
 import Bio, { TEXT } from "./components/Bio";
 import Button from "./components/Button";
 import { BsGithub, BsFilePdfFill } from "react-icons/bs";
+import Title from "./components/Title";
 
 
 function App() {
@@ -45,6 +46,11 @@ function App() {
               Baixar CV
             </Button>
           </div>
+        </section>
+        <section id="Skills">
+          <Title>
+            Skills
+          </Title>
         </section>
       </main>
     </ThemeProvider>

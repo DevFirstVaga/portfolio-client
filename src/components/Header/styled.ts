@@ -26,7 +26,7 @@ export const Wrapper = styled.header<StyledProps>`
     h1{
       font-family: ${theme.fonts.display};
       font-weight: ${theme.fonts.weight.medium};
-      font-size: 2.4rem;
+      font-size: ${theme.fonts.size.sectionTitle};
     }
     nav {
       font-size: 2rem;

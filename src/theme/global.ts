@@ -18,9 +18,12 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.white};
   }
   main{
-    max-width: 500px;
+    max-width: 50rem;
     margin: auto;
     text-align: center
+  }
+  section{
+    margin-bottom: 6rem;
   }
   .cta-buttons{
     display: flex;
