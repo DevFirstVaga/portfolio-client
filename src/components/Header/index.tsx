@@ -1,6 +1,6 @@
 import { BsList } from "react-icons/bs";
 import * as S from "./styled";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export type HeaderProps = {
   sections?: Array<string>;
@@ -17,20 +17,33 @@ function Header({ sections, nickname }: HeaderProps) {
     setTimeout(toggleMenu, 100);
   }
 
-  useEffect(() => {
-    function handleResize() {
-      const isMobile = window.innerWidth <= 700;
-      if (isMobile)
-        setToggle(false);
-      else
-        setToggle(true);
-    }
+  function useOutsideAlerter(ref: React.MutableRefObject<HTMLElement | null>) {
+    useEffect(() => {
+      function handleResize() {
+        const isMobile = window.innerWidth <= 700;
+        if (isMobile)
+          setToggle(false);
+        else
+          setToggle(true);
+      }
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      function handleClickOutside(event: MouseEvent) {
+        if (ref.current && !ref.current.contains(event.target as Node)) {
+          toggleMenu()
+        }
+      }
+      window.addEventListener("resize", handleResize);
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+
+    }, [ref]);
+  }
+
+  const wrapperRef = useRef<HTMLElement>(null);
+  useOutsideAlerter(wrapperRef);
 
   return (
     <S.Wrapper>
@@ -41,7 +54,7 @@ function Header({ sections, nickname }: HeaderProps) {
         <BsList />
       </span>
       {(toggle || window.innerWidth > 700) && (
-        <nav>
+        <nav ref={wrapperRef}>
           <ul>
             {sections?.map((link, index) => {
               return (
