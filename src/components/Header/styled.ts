@@ -27,6 +27,10 @@ export const Wrapper = styled.header<StyledProps>`
       font-family: ${theme.fonts.display};
       font-weight: ${theme.fonts.weight.medium};
       font-size: ${theme.fonts.size.sectionTitle};
+      &:hover{
+        text-shadow: 0px 0px 10px ${theme.colors.primary};
+        cursor: pointer;
+      }
     }
     nav {
       font-size: 2rem;

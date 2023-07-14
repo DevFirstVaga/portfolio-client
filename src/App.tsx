@@ -6,7 +6,8 @@ import NameAndRole from "./components/NameAndRole";
 import Photo, { IMG } from "./components/Photo";
 import Bio, { TEXT } from "./components/Bio";
 import Button from "./components/Button";
-import { BsGithub, BsFilePdfFill } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { MdPictureAsPdf } from "react-icons/md"
 import Title from "./components/Title";
 
 
@@ -34,14 +35,12 @@ function App() {
             <Button
               href="https://github.com"
               leftIcon={<BsGithub />}
-              color="black"
             >
               GitHub
             </Button>
             <Button
               href="https://example.org"
-              color={theme.colors.secondary}
-              leftIcon={<BsFilePdfFill />}
+              leftIcon={<MdPictureAsPdf />}
             >
               Baixar CV
             </Button>

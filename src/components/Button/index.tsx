@@ -1,7 +1,8 @@
+import { ReactNode } from "react";
 import * as S from "./styled";
 
 export type BtnProps = {
-  children: any;
+  children: ReactNode;
   color?: string;
   variant?: "solid" | "ghost" | "text";
   size?: "small" | "medium" | "large";
